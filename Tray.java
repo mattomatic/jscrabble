@@ -12,9 +12,4 @@ public class Tray
     {
         return this.letters;
     }
-    
-    public void Remove(String letter)
-    {
-        this.letters.replaceFirst(letter, "");
-    }
 }
