@@ -13,10 +13,10 @@ public class BoardGenerator
     
     public Collection<Board> generateBoards(Board board, Tray tray)
     {
-    	Collection<Board> boards = new LinkedList<Board>();
-    	boards.addAll(this.generateRowBoards(board, tray));
-    	boards.addAll(this.generateColBoards(board, tray));
-    	return boards;
+        Collection<Board> boards = new LinkedList<Board>();
+        boards.addAll(this.generateRowBoards(board, tray));
+        boards.addAll(this.generateColBoards(board, tray));
+        return boards;
     }
     
     private Collection<Board> generateRowBoards(Board board, Tray tray)
@@ -31,8 +31,8 @@ public class BoardGenerator
                 
                 if (this.boardValidator.isValid(newBoard))
                 {
-                	System.out.println(newBoard);
-                	boards.add(newBoard);	
+                    System.out.println(newBoard);
+                    boards.add(newBoard);    
                 }
                 
             }
@@ -53,8 +53,8 @@ public class BoardGenerator
                 
                 if (this.boardValidator.isValid(newBoard))
                 {
-                	System.out.println(newBoard);
-                	boards.add(newBoard);	
+                    System.out.println(newBoard);
+                    boards.add(newBoard);    
                 }
             }
         }
@@ -64,15 +64,15 @@ public class BoardGenerator
     
     private Board makeBoardFromRow(Board board, int rowNum, String line)
     {
-    	Board newBoard = board.copy();
-    	newBoard.setRow(rowNum, line);
-    	return newBoard;
+        Board newBoard = board.copy();
+        newBoard.setRow(rowNum, line);
+        return newBoard;
     }
     
     private Board makeBoardFromCol(Board board, int colNum, String line)
     {
-    	Board newBoard = board.copy();
-    	newBoard.setCol(colNum, line);
+        Board newBoard = board.copy();
+        newBoard.setCol(colNum, line);
         return newBoard;
     }
     
@@ -90,9 +90,9 @@ public class BoardGenerator
         
         for (Board newBoard: bg.generateBoards(board, tray))
         {
-        	System.out.println("---");
-        	System.out.println(newBoard.toString());
+            System.out.println("---");
+            System.out.println(newBoard.toString());
         }
-    	
+        
     }
 }

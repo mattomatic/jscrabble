@@ -1,20 +1,20 @@
 
 public class Tray 
 {   
-	String letters;
-	
+    String letters;
+    
     public Tray(String letters)
     {
-    	this.letters = letters;
+        this.letters = letters;
     }
     
     public String getLetters()
     {
-    	return this.letters;
+        return this.letters;
     }
     
     public void Remove(String letter)
     {
-    	this.letters.replaceFirst(letter, "");
+        this.letters.replaceFirst(letter, "");
     }
 }

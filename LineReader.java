@@ -2,11 +2,11 @@ import java.io.*;
 
 public class LineReader 
 {   
-	BufferedReader reader;
-	
-	LineReader(String inputFile)
-	{
-		try 
+    BufferedReader reader;
+    
+    LineReader(String inputFile)
+    {
+        try 
         {
             FileInputStream fis = new FileInputStream(inputFile);
             DataInputStream dis = new DataInputStream(fis);
@@ -17,17 +17,17 @@ public class LineReader
         {
             throw new RuntimeException();
         }
-	}
-	
-	public String readLine()
-	{
-		try
-		{
-			return reader.readLine();
-		}
-		catch (IOException e)
-		{
-			throw new RuntimeException();
-		}
-	}
+    }
+    
+    public String readLine()
+    {
+        try
+        {
+            return reader.readLine();
+        }
+        catch (IOException e)
+        {
+            throw new RuntimeException();
+        }
+    }
 }

@@ -6,8 +6,8 @@ public class BoardReader
     
     public Board readBoard(String inputFile)
     {
-    	LineReader reader = new LineReader(inputFile);
-    	return readBoard(reader);
+        LineReader reader = new LineReader(inputFile);
+        return readBoard(reader);
     }
     
     private Board readBoard(LineReader reader)

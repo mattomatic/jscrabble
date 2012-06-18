@@ -15,7 +15,7 @@ class main
         
         for (Board newBoard: bg.generateBoards(board, tray))
         {
-        	System.out.println(newBoard.toString());
+            System.out.println(newBoard.toString());
         }
     }
 }
