@@ -2,13 +2,13 @@ import java.util.*;
 
 public class BoardGenerator 
 {   
-    LineGenerator lineGenerator;
-    BoardValidator boardValidator;
+    LineGenerator mLineGenerator;
+    BoardValidator mBoardValidator;
     
     public BoardGenerator(LineGenerator lineGenerator, BoardValidator boardValidator)
     {
-        this.lineGenerator = lineGenerator;
-        this.boardValidator = boardValidator;
+        this.mLineGenerator = lineGenerator;
+        this.mBoardValidator = boardValidator;
     }
     
     public Collection<Board> generateBoards(Board board, Tray tray)
@@ -25,11 +25,11 @@ public class BoardGenerator
         
         for (int row = 0; row < board.getNumRows(); row++)
         {
-            for(String line: this.lineGenerator.generateLines(board.getRow(row), tray))
+            for(String line: this.mLineGenerator.generateLines(board.getRow(row), tray))
             {
                 Board newBoard = this.makeBoardFromRow(board, row, line);
                 
-                if (this.boardValidator.isValid(newBoard))
+                if (this.mBoardValidator.isValid(newBoard))
                 {
                     System.out.println(newBoard);
                     boards.add(newBoard);    
@@ -47,11 +47,11 @@ public class BoardGenerator
         
         for (int col = 0; col < board.getNumRows(); col++)
         {
-            for(String line: this.lineGenerator.generateLines(board.getCol(col), tray))
+            for(String line: this.mLineGenerator.generateLines(board.getCol(col), tray))
             {
                 Board newBoard = this.makeBoardFromCol(board, col, line);
                 
-                if (this.boardValidator.isValid(newBoard))
+                if (this.mBoardValidator.isValid(newBoard))
                 {
                     System.out.println(newBoard);
                     boards.add(newBoard);    

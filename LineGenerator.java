@@ -41,10 +41,11 @@ public class LineGenerator
     private Collection<String> getWords(String line, Tray tray)
     {
         List<String> words = new LinkedList<String>();
+        String wordRegex = this.getWordRegex(line, tray);
         
         for (String word: this.mDictionary.getWords())
         {
-            if (this.isValid(word, line, tray))
+            if (word.matches(wordRegex) && this.isValid(word, line, tray))
             {
                 words.add(word);
             }
@@ -54,14 +55,8 @@ public class LineGenerator
     }
     
     private Boolean isValid(String word, String line, Tray tray)
-    {
-        // first, check the we match the line
-        if (!word.matches(this.getWordRegex(line, tray)))
-        {
-            return false;
-        }
-        
-        // then, check that we haven't used more letters than we have to use
+    {        
+        // check that we haven't used more letters than we have to use
         String letters = line.replace(".", "") + tray.getLetters();
         for (int i = 0; i < word.length(); i++)
         {
