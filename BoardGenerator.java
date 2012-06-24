@@ -31,7 +31,6 @@ public class BoardGenerator
                 
                 if (this.mBoardValidator.isValid(newBoard))
                 {
-                    System.out.println(newBoard);
                     boards.add(newBoard);    
                 }
                 
@@ -53,7 +52,6 @@ public class BoardGenerator
                 
                 if (this.mBoardValidator.isValid(newBoard))
                 {
-                    System.out.println(newBoard);
                     boards.add(newBoard);    
                 }
             }
@@ -74,25 +72,5 @@ public class BoardGenerator
         Board newBoard = board.copy();
         newBoard.setCol(colNum, line);
         return newBoard;
-    }
-    
-    public static void main(String[] args)
-    {
-        BoardReader r = new BoardReader();
-        Board board = r.readBoard("/Users/mattomatic/Projects/scrabble/boards/test1.txt");
-        Tray tray = new Tray("aeioumnp");
-        Dictionary dict = new Dictionary("/usr/share/dict/words");
-        
-        BoardValidator bv = new BoardValidator(dict);
-        LineSplitter ls = new LineSplitter();
-        LineGenerator lg = new LineGenerator(dict, ls);
-        BoardGenerator bg = new BoardGenerator(lg, bv);
-        
-        for (Board newBoard: bg.generateBoards(board, tray))
-        {
-            System.out.println("---");
-            System.out.println(newBoard.toString());
-        }
-        
     }
 }

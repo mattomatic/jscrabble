@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class BoardValidator 
+public class BoardValidator
 {
     Dictionary mDictionary;
     
