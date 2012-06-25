@@ -1,4 +1,4 @@
-package com.matthewcsanders.jscrabble;
+package jscrabble;
 import java.io.*;
 
 public class LineReader 

@@ -1,8 +1,8 @@
-package com.matthewcsanders.jscrabble.validators;
+package jscrabble.validators;
 
 import java.util.Set;
 
-import com.matthewcsanders.jscrabble.Tray;
+import jscrabble.Tray;
 
 
 public interface Validator {

@@ -1,4 +1,4 @@
-package com.matthewcsanders.jscrabble;
+package jscrabble;
 
 public class LineGroup {
     String lhs;

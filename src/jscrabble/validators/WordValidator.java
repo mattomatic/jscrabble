@@ -1,11 +1,12 @@
-package com.matthewcsanders.jscrabble.validators;
+package jscrabble.validators;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import com.matthewcsanders.jscrabble.Tray;
+import jscrabble.Tray;
+
 
 public class WordValidator implements Validator {
 	private Map<Integer, Map<Character, Set<String>>> valid = new HashMap<Integer, Map<Character, Set<String>>>();

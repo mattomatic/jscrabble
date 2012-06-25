@@ -1,4 +1,4 @@
-package com.matthewcsanders.jscrabble.validators;
+package jscrabble.validators;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -6,7 +6,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import com.matthewcsanders.jscrabble.Tray;
+import jscrabble.Tray;
+
 
 public class CharacterValidator implements Validator {
 	Map<Character, Set<String>> valid = new HashMap<Character, Set<String>>();

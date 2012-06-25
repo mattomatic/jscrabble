@@ -6,9 +6,10 @@ import static org.junit.Assert.assertNotNull;
 import java.util.Arrays;
 import java.util.Set;
 
+import jscrabble.validators.CharacterValidator;
+
 import org.junit.Test;
 
-import com.matthewcsanders.jscrabble.validators.CharacterValidator;
 
 public class CharacterValidatorTest {
 	@Test

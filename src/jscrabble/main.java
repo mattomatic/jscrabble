@@ -1,7 +1,7 @@
-package com.matthewcsanders.jscrabble;
+package jscrabble;
 
-import com.matthewcsanders.jscrabble.validators.Validator;
-import com.matthewcsanders.jscrabble.validators.WordValidator;
+import jscrabble.validators.Validator;
+import jscrabble.validators.WordValidator;
 
 class main
 {    
@@ -18,8 +18,11 @@ class main
         LineGenerator lg = new LineGenerator(d, ls, val);
         BoardGenerator bg = new BoardGenerator(lg, bv);
         
+        
         WordFinder wf = new WordFinder();
         BoardScorer bs = new BoardScorer(d, wf);
+        
+        long start = System.currentTimeMillis();
         
         for (Board newBoard: bg.generateBoards(board, tray))
         {
@@ -27,5 +30,7 @@ class main
             System.out.println(newBoard.toString());
             bs.getScore(board, newBoard);
         }
+        
+        System.out.println(System.currentTimeMillis() - start);
     }
 }

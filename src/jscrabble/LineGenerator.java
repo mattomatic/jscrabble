@@ -1,10 +1,11 @@
-package com.matthewcsanders.jscrabble;
+package jscrabble;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.matthewcsanders.jscrabble.validators.Validator;
-import com.matthewcsanders.jscrabble.validators.WordValidator;
+import jscrabble.validators.Validator;
+import jscrabble.validators.WordValidator;
+
 
 public class LineGenerator 
 {  

@@ -1,4 +1,4 @@
-package com.matthewcsanders.jscrabble;
+package jscrabble;
 import java.util.*;
 
 public class BoardGenerator 
